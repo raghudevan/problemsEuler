@@ -88,6 +88,7 @@ public class person {
 	}
 	
 	public void excutePerson(boolean dontPrintCrap, int number){
+		this.dontPrintCrap = dontPrintCrap;
 		if(!dontPrintCrap)
 		{
 			numberOfPeople = number;
@@ -110,7 +111,7 @@ public class person {
 				recurse(0, genericPeopleArray);
 			}
 			//write final answer to a csv file
-			File outFile  = new File("C:\\Users\\Raghudevan.S\\Desktop\\findCurve.csv");
+			File outFile  = new File("D:\\programmingStuff\\findCurve.csv");
 			try {
 				BufferedWriter output = new BufferedWriter(new FileWriter(outFile));
 				output.write(finalAnswer.toString());
